@@ -1,0 +1,23 @@
+version: '3.1'
+
+services:
+  db:
+    image: postgres:14.2-alpine
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: sup3rs3cr3t
+      POSTGRES_USER: mel
+      POSTGRES_DB: mel
+    ports:
+      - 5432:5432
+    volumes:
+      - ./db-init-scripts/:/docker-entrypoint-initdb.d/
+
+  pgadmin:
+    image: dpage/pgadmin4:latest
+    restart: always
+    environment:
+      PGADMIN_DEFAULT_EMAIL: melmartinez.dev@gmail.com
+      PGADMIN_DEFAULT_PASSWORD: sup3rs3cr3t
+    ports:
+      - 8080:80

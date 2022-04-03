@@ -1,0 +1,7 @@
+DROP DATABASE IF EXISTS insly_test;
+
+CREATE DATABASE insly_test
+    WITH 
+    OWNER = mel
+    ENCODING = 'UTF8'
+    CONNECTION LIMIT = -1;
