@@ -42,5 +42,5 @@ Dev server will be listening at port 3000
 docker-compose up
 ```
 
-This will spin up a postgres server and a pgadmin4 web interface. When running for first time insly_test database will be created and populate with test data.
+This will spin up a postgres server and a pgadmin4 web interface. When running for first time insly_test database will be created and populated with test data.
 
